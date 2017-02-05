@@ -13,21 +13,23 @@ from threading import (Timer, Lock)
 
 from six import u
 
-from .chunk_downloader import (DEFAULT_CLIENT_RESULT_PREFETCH_SLOTS,
-                               DEFAULT_CLIENT_RESULT_PREFETCH_THREADS)
-from .compat import (BASE_EXCEPTION_CLASS)
-from .constants import (FIELD_NAME_TO_ID, FIELD_ID_TO_NAME)
-from .errorcode import (ER_UNSUPPORTED_METHOD,
-                        ER_CURSOR_IS_CLOSED,
-                        ER_FAILED_TO_REWRITE_MULTI_ROW_INSERT,
-                        ER_NOT_POSITIVE_SIZE,
-                        ER_FAILED_PROCESSING_PYFORMAT,
-                        ER_FAILED_TO_CONVERT_ROW_TO_PYTHON_TYPE,
-                        ER_INVALID_VALUE)
-from .errors import (Error, ProgrammingError, NotSupportedError,
-                     DatabaseError, InterfaceError)
-from .file_transfer_agent import (SnowflakeFileTransferAgent)
-from .sqlstate import (SQLSTATE_FEATURE_NOT_SUPPORTED)
+from snowflake.connector.chunk_downloader import (
+    DEFAULT_CLIENT_RESULT_PREFETCH_SLOTS,
+    DEFAULT_CLIENT_RESULT_PREFETCH_THREADS)
+from snowflake.connector.compat import (BASE_EXCEPTION_CLASS)
+from snowflake.connector.constants import (FIELD_NAME_TO_ID, FIELD_ID_TO_NAME)
+from snowflake.connector.errorcode import (
+    ER_UNSUPPORTED_METHOD, ER_CURSOR_IS_CLOSED,
+    ER_FAILED_TO_REWRITE_MULTI_ROW_INSERT, ER_NOT_POSITIVE_SIZE,
+    ER_FAILED_PROCESSING_PYFORMAT, ER_FAILED_TO_CONVERT_ROW_TO_PYTHON_TYPE,
+    ER_INVALID_VALUE)
+
+from snowflake.connector.errors import (Error, ProgrammingError,
+                                        NotSupportedError, DatabaseError,
+                                        InterfaceError)
+from snowflake.connector.file_transfer_agent import (
+    SnowflakeFileTransferAgent)
+from snowflake.connector.sqlstate import (SQLSTATE_FEATURE_NOT_SUPPORTED)
 
 STATEMENT_TYPE_ID_DML = 0x3000
 STATEMENT_TYPE_ID_INSERT = STATEMENT_TYPE_ID_DML + 0x100

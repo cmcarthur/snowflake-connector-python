@@ -9,9 +9,12 @@ from logging import getLogger
 from multiprocessing.pool import ThreadPool
 from threading import (Condition)
 
-from .errorcode import (ER_NO_ADDITIONAL_CHUNK, ER_CHUNK_DOWNLOAD_FAILED)
-from .errors import (Error, OperationalError)
-from .network import (SnowflakeRestful, NO_TOKEN, MAX_CONNECTION_POOL)
+from snowflake.connector.errorcode import (ER_NO_ADDITIONAL_CHUNK,
+                                           ER_CHUNK_DOWNLOAD_FAILED)
+
+from snowflake.connector.errors import (Error, OperationalError)
+from snowflake.connector.network import (SnowflakeRestful, NO_TOKEN,
+                                         MAX_CONNECTION_POOL)
 
 DEFAULT_REQUEST_TIMEOUT = 3600
 DEFAULT_CLIENT_RESULT_PREFETCH_SLOTS = 2

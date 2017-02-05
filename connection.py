@@ -10,20 +10,22 @@ from io import StringIO
 from threading import Lock
 from time import strptime
 
-from . import errors
-from . import network
-from .chunk_downloader import SnowflakeChunkDownloader
-from .compat import (TO_UNICODE, IS_OLD_PYTHON, urlencode, PY2)
-from .converter import SnowflakeConverter
-from .cursor import SnowflakeCursor
-from .errorcode import (ER_CONNECTION_IS_CLOSED,
-                        ER_NO_ACCOUNT_NAME, ER_OLD_PYTHON, ER_NO_USER,
-                        ER_NO_PASSWORD, ER_INVALID_VALUE)
-from .errors import (Error, ProgrammingError, InterfaceError,
-                     DatabaseError)
-from .sqlstate import (SQLSTATE_CONNECTION_NOT_EXISTS,
-                       SQLSTATE_FEATURE_NOT_SUPPORTED)
-from .util_text import split_statements, construct_hostname
+from snowflake.connector import errors
+from snowflake.connector import network
+from snowflake.connector.chunk_downloader import SnowflakeChunkDownloader
+from snowflake.connector.compat import (TO_UNICODE, IS_OLD_PYTHON, urlencode,
+                                        PY2)
+from snowflake.connector.converter import SnowflakeConverter
+from snowflake.connector.cursor import SnowflakeCursor
+from snowflake.connector.errorcode import (ER_CONNECTION_IS_CLOSED,
+                                           ER_NO_ACCOUNT_NAME, ER_OLD_PYTHON,
+                                           ER_NO_USER, ER_NO_PASSWORD,
+                                           ER_INVALID_VALUE)
+from snowflake.connector.errors import (Error, ProgrammingError,
+                                        InterfaceError, DatabaseError)
+from snowflake.connector.sqlstate import (SQLSTATE_CONNECTION_NOT_EXISTS,
+                                          SQLSTATE_FEATURE_NOT_SUPPORTED)
+from snowflake.connector.util_text import split_statements, construct_hostname
 
 try:
     import snowflake.internal.constants

@@ -28,9 +28,10 @@ from boto3.exceptions import RetriesExceededError, S3UploadFailedError
 from boto3.s3.transfer import TransferConfig
 from botocore.client import Config
 
-from .compat import (PKCS5_PAD, PKCS5_UNPAD, PKCS5_OFFSET, TO_UNICODE)
-from .constants import (AMZ_MATDESC, AMZ_KEY, AMZ_IV,
-                        SFC_DIGEST, SHA256_DIGEST, UTF8)
+from snowflake.connector.compat import (PKCS5_PAD, PKCS5_UNPAD,
+                                        PKCS5_OFFSET, TO_UNICODE)
+from snowflake.connector.constants import (AMZ_MATDESC, AMZ_KEY, AMZ_IV,
+                                           SFC_DIGEST, SHA256_DIGEST, UTF8)
 
 RESULT_STATUS_ERROR = u'ERROR'
 RESULT_STATUS_UPLOADED = u'UPLOADED'

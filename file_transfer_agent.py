@@ -16,22 +16,24 @@ from time import (time, sleep)
 
 import botocore.exceptions
 
-from .compat import (GET_CWD, TO_UNICODE)
-from .constants import (SHA256_DIGEST)
-from .converter_snowsql import SnowflakeConverterSnowSQL
-from .errorcode import (ER_INVALID_STAGE_FS, ER_INVALID_STAGE_LOCATION,
-                        ER_LOCAL_PATH_NOT_DIRECTORY,
-                        ER_FILE_NOT_EXISTS,
-                        ER_COMPRESSION_NOT_SUPPORTED,
-                        ER_INTERNAL_NOT_MATCH_ENCRYPT_MATERIAL,
-                        ER_FAILED_TO_CHECK_EXISTING_FILES)
-from .errors import (Error, OperationalError, InternalError, DatabaseError,
-                     ProgrammingError)
-from .file_compression_type import FileCompressionType
-from .s3_util import (SnowflakeS3FileEncryptionMaterial, SnowflakeS3Util,
-                      RESULT_STATUS_COLLISION, RESULT_STATUS_DOWNLOADED,
-                      RESULT_STATUS_ERROR, RESULT_STATUS_UPLOADED,
-                      RESULT_STATUS_RENEW_TOKEN)
+from snowflake.connector.compat import (GET_CWD, TO_UNICODE)
+from snowflake.connector.constants import (SHA256_DIGEST)
+from snowflake.connector.converter_snowsql import SnowflakeConverterSnowSQL
+from snowflake.connector.errorcode import (
+    ER_INVALID_STAGE_FS, ER_INVALID_STAGE_LOCATION,
+    ER_LOCAL_PATH_NOT_DIRECTORY, ER_FILE_NOT_EXISTS,
+    ER_COMPRESSION_NOT_SUPPORTED, ER_INTERNAL_NOT_MATCH_ENCRYPT_MATERIAL,
+    ER_FAILED_TO_CHECK_EXISTING_FILES)
+from snowflake.connector.errors import (Error, OperationalError, InternalError,
+                                        DatabaseError, ProgrammingError)
+from snowflake.connector.file_compression_type import FileCompressionType
+from snowflake.connector.s3_util import (SnowflakeS3FileEncryptionMaterial,
+                                         SnowflakeS3Util,
+                                         RESULT_STATUS_COLLISION,
+                                         RESULT_STATUS_DOWNLOADED,
+                                         RESULT_STATUS_ERROR,
+                                         RESULT_STATUS_UPLOADED,
+                                         RESULT_STATUS_RENEW_TOKEN)
 
 S3_FS = u'S3'
 LOCAL_FS = u'LOCAL_FS'

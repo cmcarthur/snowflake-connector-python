@@ -9,10 +9,10 @@ from logging import getLogger
 
 import pytz
 
-from . import errors
-from .compat import TO_UNICODE
-from .constants import UTF8
-from .mixin import UnicodeMixin
+from snowflake.connector import errors
+from snowflake.connector.compat import TO_UNICODE
+from snowflake.connector.constants import UTF8
+from snowflake.connector.mixin import UnicodeMixin
 
 ZERO_TIMEDELTA = timedelta(0)
 

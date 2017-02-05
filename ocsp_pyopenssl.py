@@ -36,15 +36,16 @@ from pyasn1.codec.der import encoder as der_encoder
 from pyasn1.type import (univ, tag)
 from pyasn1_modules import (rfc2459, rfc2437, rfc2560)
 
-from .compat import (PY2, urlsplit, urlunsplit, OK)
-from .errorcode import (ER_FAILED_TO_GET_OCSP_URI,
-                        ER_INVALID_OCSP_RESPONSE,
-                        ER_SERVER_CERTIFICATE_REVOKED,
-                        ER_CA_CERTIFICATE_NOT_FOUND)
-from .errors import (OperationalError)
-from .rfc6960 import (OCSPRequest, OCSPResponse, TBSRequest, CertID, Request,
-                      Version, BasicOCSPResponse,
-                      OCSPResponseStatus)
+from snowflake.connector.compat import (PY2, urlsplit, urlunsplit, OK)
+from snowflake.connector.errorcode import (ER_FAILED_TO_GET_OCSP_URI,
+                                           ER_INVALID_OCSP_RESPONSE,
+                                           ER_SERVER_CERTIFICATE_REVOKED,
+                                           ER_CA_CERTIFICATE_NOT_FOUND)
+from snowflake.connector.errors import (OperationalError)
+from snowflake.connector.rfc6960 import (OCSPRequest, OCSPResponse,
+                                         TBSRequest, CertID, Request,
+                                         Version, BasicOCSPResponse,
+                                         OCSPResponseStatus)
 
 ROOT_CERTIFICATES_DICT_LOCK = Lock()
 

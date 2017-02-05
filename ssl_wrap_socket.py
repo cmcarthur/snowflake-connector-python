@@ -36,9 +36,9 @@ from cryptography import x509
 from cryptography.hazmat.backends.openssl import backend as openssl_backend
 from cryptography.hazmat.backends.openssl.x509 import _Certificate
 
-from .errorcode import (ER_SERVER_CERTIFICATE_REVOKED)
-from .errors import (OperationalError)
-from .ocsp_pyopenssl import SnowflakeOCSP
+from snowflake.connector.errorcode import (ER_SERVER_CERTIFICATE_REVOKED)
+from snowflake.connector.errors import (OperationalError)
+from snowflake.connector.ocsp_pyopenssl import SnowflakeOCSP
 
 MAX = 64
 
@@ -210,7 +210,7 @@ try:  # Platform-specific: Python 2
     from socket import _fileobject
 except:
     _fileobject = None
-    from .backport_makefile import backport_makefile
+    from snowflake.connector.backport_makefile import backport_makefile
 
 
 class WrappedSocket(object):

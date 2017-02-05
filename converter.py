@@ -10,13 +10,14 @@ from logging import getLogger
 
 import pytz
 
-from .compat import (IS_BINARY, TO_UNICODE, IS_NUMERIC)
-from .errorcode import (ER_NOT_SUPPORT_DATA_TYPE)
-from .errors import (ProgrammingError)
-from .sfbinaryformat import (binary_to_python,
-                             binary_to_snowflake)
-from .sfdatetime import (sfdatetime_total_seconds_from_timedelta,
-                         sfdatetime_to_snowflake)
+from snowflake.connector.compat import (IS_BINARY, TO_UNICODE, IS_NUMERIC)
+from snowflake.connector.errorcode import (ER_NOT_SUPPORT_DATA_TYPE)
+from snowflake.connector.errors import (ProgrammingError)
+from snowflake.connector.sfbinaryformat import (binary_to_python,
+                                                binary_to_snowflake)
+from snowflake.connector.sfdatetime import (
+    sfdatetime_total_seconds_from_timedelta,
+    sfdatetime_to_snowflake)
 
 try:
     import numpy

@@ -12,9 +12,10 @@ import datetime
 import json
 import time
 
-from .constants import (get_string_types, get_binary_types, get_number_types,
-                        get_timestamp_types)
-from .mixin import UnicodeMixin
+from snowflake.connector.constants import (get_string_types, get_binary_types,
+                                           get_number_types,
+                                           get_timestamp_types)
+from snowflake.connector.mixin import UnicodeMixin
 
 
 class _DBAPITypeObject:

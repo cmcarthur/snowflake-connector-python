@@ -7,7 +7,7 @@ import logging
 from logging import getLogger
 
 from snowflake.connector.constants import UTF8
-from .compat import BASE_EXCEPTION_CLASS, PY2
+from snowflake.connector.compat import BASE_EXCEPTION_CLASS, PY2
 
 
 class Error(BASE_EXCEPTION_CLASS):

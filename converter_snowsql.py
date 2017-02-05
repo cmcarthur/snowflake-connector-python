@@ -8,11 +8,13 @@ import time
 from datetime import timedelta, date
 from logging import getLogger
 
-from .compat import TO_UNICODE
-from .constants import is_timestamp_type_name
-from .converter import (SnowflakeConverter, ZERO_EPOCH)
-from .sfbinaryformat import (binary_to_python, SnowflakeBinaryFormat)
-from .sfdatetime import (SnowflakeDateTimeFormat, SnowflakeDateTime)
+from snowflake.connector.compat import TO_UNICODE
+from snowflake.connector.constants import is_timestamp_type_name
+from snowflake.connector.converter import (SnowflakeConverter, ZERO_EPOCH)
+from snowflake.connector.sfbinaryformat import (binary_to_python,
+                                                SnowflakeBinaryFormat)
+from snowflake.connector.sfdatetime import (SnowflakeDateTimeFormat,
+                                            SnowflakeDateTime)
 
 logger = getLogger(__name__)
 

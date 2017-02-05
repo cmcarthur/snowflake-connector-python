@@ -23,27 +23,30 @@ from botocore.vendored.requests.exceptions import (ConnectionError, SSLError)
 from botocore.vendored.requests.packages.urllib3.exceptions import (
     ProtocolError)
 
-from . import ssl_wrap_socket
-from .compat import (
-    BAD_REQUEST, SERVICE_UNAVAILABLE, GATEWAY_TIMEOUT,
-    FORBIDDEN, BAD_GATEWAY,
-    UNAUTHORIZED, INTERNAL_SERVER_ERROR, OK, BadStatusLine)
-from .compat import (Queue, EmptyQueue)
-from .compat import (TO_UNICODE, urlencode)
-from .compat import proxy_bypass
-from .errorcode import (ER_FAILED_TO_CONNECT_TO_DB, ER_CONNECTION_IS_CLOSED,
-                        ER_FAILED_TO_REQUEST, ER_FAILED_TO_RENEW_SESSION,
-                        ER_FAILED_TO_SERVER)
-from .errors import (Error, OperationalError, DatabaseError, ProgrammingError,
-                     GatewayTimeoutError, ServiceUnavailableError,
-                     InterfaceError, InternalServerError, ForbiddenError,
-                     BadGatewayError, BadRequest)
-from .gzip_decoder import (decompress_raw_data)
-from .sqlstate import (SQLSTATE_CONNECTION_NOT_EXISTS,
-                       SQLSTATE_CONNECTION_WAS_NOT_ESTABLISHED,
-                       SQLSTATE_CONNECTION_REJECTED)
-from .util_text import split_rows_from_stream
-from .version import VERSION
+from snowflake.connector. import ssl_wrap_socket
+from snowflake.connector.compat import (
+    BAD_REQUEST, SERVICE_UNAVAILABLE, GATEWAY_TIMEOUT, FORBIDDEN,
+    BAD_GATEWAY, UNAUTHORIZED, INTERNAL_SERVER_ERROR, OK, BadStatusLine)
+from snowflake.connector.compat import (Queue, EmptyQueue)
+from snowflake.connector.compat import (TO_UNICODE, urlencode)
+from snowflake.connector.compat import proxy_bypass
+from snowflake.connector.errorcode import (ER_FAILED_TO_CONNECT_TO_DB,
+                                           ER_CONNECTION_IS_CLOSED,
+                                           ER_FAILED_TO_REQUEST,
+                                           ER_FAILED_TO_RENEW_SESSION,
+                                           ER_FAILED_TO_SERVER)
+from snowflake.connector.errors import (Error, OperationalError, DatabaseError,
+                                        ProgrammingError, GatewayTimeoutError,
+                                        ServiceUnavailableError,
+                                        InterfaceError, InternalServerError,
+                                        ForbiddenError, BadGatewayError,
+                                        BadRequest)
+from snowflake.connector.gzip_decoder import (decompress_raw_data)
+from snowflake.connector.sqlstate import (
+    SQLSTATE_CONNECTION_NOT_EXISTS, SQLSTATE_CONNECTION_WAS_NOT_ESTABLISHED,
+    SQLSTATE_CONNECTION_REJECTED)
+from snowflake.connector.util_text import split_rows_from_stream
+from snowflake.connector.version import VERSION
 
 """
 Monkey patch for PyOpenSSL Socket wrapper

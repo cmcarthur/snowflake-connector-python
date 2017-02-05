@@ -1,4 +1,4 @@
-from .compat import PY2
+from snowflake.connector.compat import PY2
 
 
 class UnicodeMixin(object):
