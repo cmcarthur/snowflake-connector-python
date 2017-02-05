@@ -8,8 +8,8 @@ from logging import getLogger
 logger = getLogger(__name__)
 
 from snowflake.connector.network import SnowflakeRestful
-from snowflake.connector import errors
-from snowflake.connector import errorcode
+import snowflake.connector.errorcode as errorcode
+import snowflake.connector.errors as errors
 
 
 def test_no_auth(db_parameters):

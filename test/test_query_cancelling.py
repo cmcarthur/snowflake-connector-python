@@ -12,7 +12,7 @@ import pytest
 
 logger = getLogger(__name__)
 logging.basicConfig(level=logging.CRITICAL)
-from snowflake.connector import errors
+import snowflake.connector.errors as errors
 
 
 @pytest.fixture()

@@ -13,7 +13,9 @@ import pytest
 import pytz
 
 import snowflake.connector
-from snowflake.connector import (constants, errorcode, errors)
+import snowflake.connector.constants as constants
+import snowflake.connector.errorcode as errorcode
+import snowflake.connector.errors as errors
 from snowflake.connector.compat import (BASE_EXCEPTION_CLASS, PY2)
 
 

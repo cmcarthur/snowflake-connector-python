@@ -7,7 +7,7 @@
 
 import pytest
 
-from snowflake.connector import errors
+import snowflake.connector.errors as errors
 
 
 def test_qmark_paramstyle(conn_cnx, db_parameters):

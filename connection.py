@@ -10,8 +10,8 @@ from io import StringIO
 from threading import Lock
 from time import strptime
 
-from snowflake.connector import errors
-from snowflake.connector import network
+import snowflake.connector.errors as errors
+import snowflake.connector.network as network
 from snowflake.connector.chunk_downloader import SnowflakeChunkDownloader
 from snowflake.connector.compat import (TO_UNICODE, IS_OLD_PYTHON, urlencode,
                                         PY2)

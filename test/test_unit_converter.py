@@ -6,7 +6,7 @@
 
 from logging import getLogger
 
-from snowflake.connector import converter
+import snowflake.connector.converter as converter
 from snowflake.connector.compat import TO_UNICODE
 
 logger = getLogger(__name__)

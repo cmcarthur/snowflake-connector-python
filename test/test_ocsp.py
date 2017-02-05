@@ -12,7 +12,7 @@ from socket import (socket)
 
 from OpenSSL.SSL import SSLv23_METHOD, Context, Connection
 
-from snowflake.connector import ocsp_pyopenssl
+import snowflake.connector.ocsp_pyopenssl as ocsp_pyopenssl
 
 for logger_name in ['test', 'snowflake.connector', 'botocore']:
     logger = logging.getLogger(logger_name)

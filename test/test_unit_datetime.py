@@ -6,7 +6,7 @@
 import time
 from datetime import datetime
 
-from snowflake.connector import sfdatetime
+import snowflake.connector.sfdatetime as sfdatetime
 
 
 def test_basic_datetime_format():

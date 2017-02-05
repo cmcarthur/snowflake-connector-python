@@ -6,7 +6,7 @@
 
 
 import snowflake.connector
-from snowflake.connector import errors
+import snowflake.connector.errors as errors
 
 
 def test_error_classes(conn_cnx):

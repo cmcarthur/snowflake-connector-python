@@ -9,7 +9,7 @@ from logging import getLogger
 
 import pytz
 
-from snowflake.connector import errors
+import snowflake.connector.errors as errors
 from snowflake.connector.compat import TO_UNICODE
 from snowflake.connector.constants import UTF8
 from snowflake.connector.mixin import UnicodeMixin

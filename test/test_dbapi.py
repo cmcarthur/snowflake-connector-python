@@ -19,9 +19,9 @@ import pytest
 
 import snowflake.connector
 import snowflake.connector.dbapi
-from snowflake.connector import dbapi
-from snowflake.connector import errorcode
-from snowflake.connector import errors
+import snowflake.connector.dbapi as dbapi
+import snowflake.connector.errorcode as errorcode
+import snowflake.connector.errors as errors
 from snowflake.connector.compat import BASE_EXCEPTION_CLASS
 
 TABLE1 = 'dbapi_ddl1'
